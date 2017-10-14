@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    color:gray;
+    src: url(https://fonts.googleapis.com/css?family=Roboto) format("truetype");
+}
+
+.cv-app-container{
+	width:800px;
+	height: 100%;
+	margin:0 auto;
+}
+
+ul {
+	list-style: none;
+	color: gray;
+
+}
+
+.cv-app-header-description{
+	 word-wrap: break-word;
+	 font-size: small !important;
+}
+.cv-app-sections {
+	color:black;
+}
