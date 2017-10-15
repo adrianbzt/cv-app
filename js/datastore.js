@@ -30,11 +30,80 @@ Object.defineProperties(window.DataStore, {
 	        	    {
         	    	"data":{
 		                "English":"Advanced",
-		                "French": "Intermediate"
+		                "French": "Intermediate",
+                        "Spanish": "Beginner",
 	        		},
         	    	'has-icons': 0,
         	    	'has-graph': 1,		                
-	        		},	        		
+	        		},	
+                "key-skills": 
+                    {
+                    "data":{
+                        "Team":"Management",
+                        "Money":"Management",
+                        "Time": "Management",
+                        "Chart": "Management",
+                    },
+                    'has-icons': 0,
+                    'has-graph': 0,                     
+                    },   
+                "technical-skills": 
+                    {
+                    "data":{
+                        "PHP":"Intermediate",
+                        "MySQL":"Intermediate",
+                        "Java": "Intermediate",
+                        "JavaScript": "Intermediate",
+                        "HTML": "Intermediate",
+                        "CSS": "Intermediate",
+                    },
+                    'has-icons': 0,
+                    'has-graph': 0,                     
+                    },    
+                "experience": 
+                    {
+                    "data":[
+                    {
+                        "Position": "Season VI",
+                        "From": "2016-09-01",
+                        "To": "2017-09-01",
+                        "Job Desctiption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    },
+                    {
+                        "Position": "Season VI",
+                        "From": "2016-09-01",
+                        "To": "2017-09-01",
+                        "Desctiption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    }],
+                    'has-icons': 0,
+                    'has-graph': 0,                     
+                    }, 
+                "education": 
+                    {
+                    "data":[
+                    {
+                        "University": "GOT",
+                        "From": "2016-09-01",
+                        "To": "2017-09-01",
+                        "Desctiption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    }
+                    ],
+                    'has-icons': 0,
+                    'has-graph': 0,                     
+                    },
+                "courses": 
+                    {
+                    "data":[
+                    {
+                        "Course Name": "Season VI",
+                        "From": "2016-09-01",
+                        "To": "2017-09-01",
+                        "Desctiption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    }
+                    ],
+                    'has-icons': 0,
+                    'has-graph': 0,                     
+                    },                                                                                                     		
         		},
         writable: true,
         configurable: true,
@@ -96,5 +165,24 @@ Object.defineProperties(window.DataStore, {
         writable: true,
         configurable: true,
         enumerable: false,
-    },     
+    }, 
+    progressBarLevel: {
+        value: {
+        "Beginner": {
+            'bg':'bg-warning',
+            'progress': 25
+        },
+        "Intermediate": {
+            'bg':'bg-info',
+            'progress': 75
+        },
+        "Advanced": {
+            'bg':'bg-success',
+            'progress': 100
+        },   
+        },
+        writable: true,
+        configurable: true,
+        enumerable: false,
+    }    
 });
