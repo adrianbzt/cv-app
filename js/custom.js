@@ -129,7 +129,7 @@ function updateSpecialSections(section) {
 				htmlContentUl = `<div class="container" style=""> 
 				<div class="row">
 				<div class="col-lg-4">
-				<span style="font-size: 12px; "> `+value['From']+` &rarr; `+value['To']+`</span>
+				<span class="cv-app-span-interval" style="font-size: 12px;"> `+value['From']+` &rarr; `+value['To']+`</span>
 				</div>
 				<div class="col-lg-8">
 					<div class="row">
@@ -153,7 +153,7 @@ function updateSpecialSections(section) {
 
 $(".cv-app-sections").hover(function() {
     $(this).css('cursor','pointer');
-    $(this).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+    $(this).fadeIn(100).fadeOut(100).fadeIn(100);
 }, function() {
     $(this).css('cursor','auto');
 });
