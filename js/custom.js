@@ -66,7 +66,7 @@ function updatePersonalInfo() {
 
 				htmlContentIcon = `<span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-`+ key +` fa-stack-1x"> </i> </span> `;	
 
-				htmlContentLi += `<li>` + htmlContentIcon + value +` </li>`;
+				htmlContentLi += `<li class="cv-app-span-entry">` + htmlContentIcon + value +` </li>`;
 			});
 
 			htmlContentUl += htmlContentLi;
@@ -104,7 +104,7 @@ function updateStandard(section) {
 				</div></div>`;
 				}
 
-				htmlContentLi += `<li><span class='standard-key-name'>` +  key + `</span>: `+ value + progressBar + `</li>`;
+				htmlContentLi += `<li class="cv-app-span-entry"><span class='standard-key-name '>` +  key + `</span>: `+ value + progressBar + `</li>`;
 			});
 
 			htmlContentUl += htmlContentLi;
@@ -129,14 +129,14 @@ function updateSpecialSections(section) {
 				htmlContentUl = `<div class="container" style=""> 
 				<div class="row">
 				<div class="col-lg-4">
-				<span class="cv-app-span-interval" style="font-size: 12px;"> `+value['From']+` &rarr; `+value['To']+`</span>
+				<span class="cv-app-span-interval"> `+value['From']+` &rarr; `+value['To']+`</span>
 				</div>
 				<div class="col-lg-8">
 					<div class="row">
-					<span style="font-size: 14px;font-weight: bold; padding: 2px; margin-top: 1px;">`+value['Header']+` </span>
+					<span class="cv-app-span-header">`+value['Header']+` </span>
 					</div>
 					<div class="row">
-					<span style="font-size: 12px; padding: 2px">`+value['Description']+`</span>
+					<span class="cv-app-span-description">`+value['Description']+`</span>
 					</div>
 				</div>
 				</div>
@@ -150,12 +150,5 @@ function updateSpecialSections(section) {
 
 			
 		}
-
-$(".cv-app-sections").hover(function() {
-    $(this).css('cursor','pointer');
-    $(this).fadeIn(100).fadeOut(100).fadeIn(100);
-}, function() {
-    $(this).css('cursor','auto');
-});
 
 });

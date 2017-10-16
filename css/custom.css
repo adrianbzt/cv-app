@@ -38,3 +38,20 @@ ul {
 .cv-app-span-interval{
 	font-size: 12px;
 }
+
+.cv-app-span-header{
+	font-size: 14px;
+	font-weight: bold;
+	padding: 2px;
+	margin-top: 1px;
+}
+
+.cv-app-span-description {
+	font-size: 12px;
+	padding: 2px
+}
+
+.cv-app-span-entry{
+	font-size: 12px;
+	padding: 2px	
+}
