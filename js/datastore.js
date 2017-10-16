@@ -64,29 +64,48 @@ Object.defineProperties(window.DataStore, {
                     {
                     "data":[
                     {
-                        "Position": "Season VI",
+                        "Header": "Main Role: Season VI",
                         "From": "2016-09-01",
                         "To": "2017-09-01",
-                        "Job Desctiption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     },
                     {
-                        "Position": "Season VI",
+                        "Header": "Main Role: Season VII",
                         "From": "2016-09-01",
                         "To": "2017-09-01",
-                        "Desctiption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    }],
+                        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    },
+                    {
+                        "Header": "Main Role: Season VIII",
+                        "From": "2016-09-01",
+                        "To": "2017-09-01",
+                        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    },                    
+                    ],
                     'has-icons': 0,
-                    'has-graph': 0,                     
+                    'has-graph': 0,
                     }, 
                 "education": 
                     {
                     "data":[
                     {
-                        "University": "GOT",
+                        "Header": "University of War I",
                         "From": "2016-09-01",
                         "To": "2017-09-01",
-                        "Desctiption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    }
+                        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    },
+                    {
+                        "Header": "University of War II",
+                        "From": "2016-09-01",
+                        "To": "2017-09-01",
+                        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    },
+                    {
+                        "Header": "University of War III",
+                        "From": "2016-09-01",
+                        "To": "2017-09-01",
+                        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    },                                        
                     ],
                     'has-icons': 0,
                     'has-graph': 0,                     
@@ -95,11 +114,23 @@ Object.defineProperties(window.DataStore, {
                     {
                     "data":[
                     {
-                        "Course Name": "Season VI",
+                        "Header": "Game of Thrones: Mastery I",
                         "From": "2016-09-01",
                         "To": "2017-09-01",
-                        "Desctiption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    }
+                        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    },
+                    {
+                        "Header": "Game of Thrones: Mastery II",
+                        "From": "2016-09-01",
+                        "To": "2017-09-01",
+                        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    },
+                    {
+                        "Header": "Game of Thrones: Mastery III",
+                        "From": "2016-09-01",
+                        "To": "2017-09-01",
+                        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    },                                        
                     ],
                     'has-icons': 0,
                     'has-graph': 0,                     

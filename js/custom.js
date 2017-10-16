@@ -123,94 +123,33 @@ function updateSpecialSections(section) {
 
 		if(sections != undefined) {
 
-			let htmlContentUl = `<ul>`;
 
-			let htmlContentLi = '';
+				$.each(sections, function(key, value) {
 
-			let htmlContentIcon = '';
+				htmlContentUl = `<div class="container" style=""> 
+				<div class="row">
+				<div class="col-lg-4">
+				<span style="font-size: 12px; "> `+value['From']+` &rarr; `+value['To']+`</span>
+				</div>
+				<div class="col-lg-8">
+					<div class="row">
+					<span style="font-size: 14px;font-weight: bold; padding: 2px; margin-top: 1px;">`+value['Header']+` </span>
+					</div>
+					<div class="row">
+					<span style="font-size: 12px; padding: 2px">`+value['Description']+`</span>
+					</div>
+				</div>
+				</div>
+				</div>`;
 
+				$(htmlContentUl).insertAfter($('#' + section));
 
-
-			$.each(sections, function(key, value) {
-				
-				let jobUl = `<ul class="special-section-entry">`;
-
-				let jobLi = ``;
-
-				$.each(value, function(jobKey, jobName) {
-
-					jobLi += `<li><span class="job-name-li">` + jobKey + `</span> : ` + jobName + `</li>`;
 				});
 
-				jobUl += jobLi + `</ul>`
+			}
 
-				htmlContentLi += `<li>` + jobUl +` </li>`;
-			});
-
-			htmlContentUl += htmlContentLi;
-
-			htmlContentUl += `</ul>`;
-
-			$(htmlContentUl).insertAfter($('#' + section));
+			
 		}
-}
-
-// $('.cv-app-sections').on('click', function() {
-
-// 	let clickedSection = $(this).attr('id');
-
-// 	let closeResult = closeSections();
-// 	let sections;
-// 	let hasIcons;
-// 	let hasGraph
-
-// 	if(window.DataStore.sectionsData[clickedSection] != undefined) {
-// 		sections = window.DataStore.sectionsData[clickedSection]['data'];
-// 		hasIcons = window.DataStore.sectionsData[clickedSection]['has-icons'];
-// 		hasGraph = window.DataStore.sectionsData[clickedSection]['has-graph'];
-// 	}
-
-// 	if(closeResult == 0 && sections != undefined) {
-
-// 			let htmlContentUl = `<ul>`;
-
-// 			let htmlContentLi = '';
-
-// 			let htmlContentIcon = '';
-
-// 			$.each(sections, function(key, value) {
-
-// 				if(hasIcons == 1) {
-// 					htmlContentIcon = `<span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-`+ key +` fa-stack-1x"> </i> </span> `;	
-// 				} else {
-// 					htmlContentIcon = key + ': ';
-// 				}
-
-// 				htmlContentLi += `<li>` + htmlContentIcon + value +` </li>`;
-// 			});
-
-// 			htmlContentUl += htmlContentLi;
-
-// 			htmlContentUl += `</ul>`;
-
-// 			$(htmlContentUl).insertAfter($(this));
-// 		}
-	
-// });
-
-// function closeSections() {
-
-// 	let leftUl = $('#cv-app-left').find('ul');
-// 	let rightUl = $('#cv-app-right').find('ul')
-// 	leftUl.remove();
-// 	rightUl.remove();
-
-// 	if(leftUl.length > 0 || rightUl.length >0) {
-// 		return 1;
-// 	} else {
-// 		return 0;
-// 	}
-// }
 
 $(".cv-app-sections").hover(function() {
     $(this).css('cursor','pointer');
