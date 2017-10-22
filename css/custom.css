@@ -16,6 +16,7 @@ ul {
 
 }
 
+
 .cv-app-header-description{
 	 word-wrap: break-word;
 	 font-size: small !important;
@@ -54,4 +55,8 @@ ul {
 .cv-app-span-entry{
 	font-size: 12px;
 	padding: 2px	
+}
+
+.cv-app-standard-container{
+	padding-left: 40px;
 }

@@ -40,7 +40,7 @@ function includeSections() {
 function updateSections() {
 
 	updatePersonalInfo();
-	updateStandard('languages');
+	updateLanguages('languages');
 	updateStandard('key-skills');
 	updateStandard('technical-skills');
 	updateSpecialSections('experience');
@@ -94,16 +94,6 @@ function updateStandard(section) {
 			let progressBar = '';
 
 			$.each(sections, function(key, value) {
-
-				if(hasGraph == 1) {
-
-				let progressSettings = window.DataStore.progressBarLevel;
-
-				progressBar = `<div class="progress">
-				<div class="progress-bar `+ progressSettings[value]['bg'] +`" role="progressbar" style="width: `+progressSettings[value]['progress']+`%" aria-valuenow="`+progressSettings[value]['progress']+`" aria-valuemin="0" aria-valuemax="100">
-				</div></div>`;
-				}
-
 				htmlContentLi += `<li class="cv-app-span-entry"><span class='standard-key-name '>` +  key + `</span>: `+ value + progressBar + `</li>`;
 			});
 
@@ -113,6 +103,56 @@ function updateStandard(section) {
 
 			$(htmlContentUl).insertAfter($('#' + section));
 		}
+}
+
+function updateLanguages(section) {
+
+		let sections = window.DataStore.sectionsData[section]['data'];
+		let hasIcons = window.DataStore.sectionsData[section]['has-icons'];
+		let hasGraph = window.DataStore.sectionsData[section]['has-graph'];
+
+		let contentToInclude = '';
+		$.each(sections, function(key, value) {
+			let level = window.DataStore.languageSettings[value];
+
+			let whiteDot = '&#9675;';
+			let blackDot = '&#9679';
+
+			let dots = '';
+
+			for(var i = 0; i < level['black']; i++) {
+				dots += blackDot;
+			}
+
+			for(var i = 0; i < level['white']; i++) {
+				dots += whiteDot;
+			}
+
+
+			contentToInclude += `
+
+					<div class="col-lg-3" style="padding-bottom: 20px;">
+						<div class="row" style="font-size: 12px;">
+							` + key + `
+						</div>
+						<div class="row" >
+							` + dots + `
+						</div>
+						<div class="row" style="font-size: 12px;">
+							` + value + `
+						</div>
+					</div>
+			`;
+		});
+
+			htmlContentDiv = `
+			<div class="container"> 
+				<div class="row cv-app-standard-container"> 
+					` +  contentToInclude + `										
+				</div> 
+			</div>`;
+
+			$(htmlContentDiv).insertAfter($('#' + section));
 }
 
 function updateSpecialSections(section) {

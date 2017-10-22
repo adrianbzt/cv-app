@@ -197,19 +197,19 @@ Object.defineProperties(window.DataStore, {
         configurable: true,
         enumerable: false,
     }, 
-    progressBarLevel: {
+    languageSettings: {
         value: {
         "Beginner": {
-            'bg':'bg-warning',
-            'progress': 25
+            'white': 4,
+            'black':1,
         },
         "Intermediate": {
-            'bg':'bg-info',
-            'progress': 75
+            'white': 2,
+            'black':3,
         },
         "Advanced": {
-            'bg':'bg-success',
-            'progress': 100
+            'white': 0,
+            'black':5,
         },   
         },
         writable: true,
