@@ -58,7 +58,7 @@ Object.defineProperties(window.DataStore, {
                         "CSS": "Intermediate",
                     },
                     'has-icons': 0,
-                    'has-graph': 0,                     
+                    'has-graph': 1,                     
                     },    
                 "experience": 
                     {

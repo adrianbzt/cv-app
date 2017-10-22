@@ -42,7 +42,7 @@ function updateSections() {
 	updatePersonalInfo();
 	updateStandardNew('languages');
 	updateStandardNew('technical-skills');
-	updateStandard('key-skills');
+	updateStandardNew('key-skills');
 	updateSpecialSections('experience');
 	updateSpecialSections('education');
 	updateSpecialSections('courses');
@@ -77,7 +77,7 @@ function updatePersonalInfo() {
 		}
 }
 
-function updateStandard(section) {
+function updateStandardOld(section) {
 
 		let sections = window.DataStore.sectionsData[section]['data'];
 		let hasIcons = window.DataStore.sectionsData[section]['has-icons'];
@@ -85,23 +85,26 @@ function updateStandard(section) {
 
 		if(sections != undefined) {
 
-			let htmlContentUl = `<ul>`;
+			let htmlContentDiv = `<div class='container'>
+			<div class="row">
+			<div class="col-lg-12" style="padding-bottom: 20px;"> 
 
-			let htmlContentLi = '';
+			`;
 
-			let htmlContentIcon = '';
-
-			let progressBar = '';
+			let htmlContentDivSpan = '';
 
 			$.each(sections, function(key, value) {
-				htmlContentLi += `<li class="cv-app-span-entry"><span class='standard-key-name '>` +  key + `</span>: `+ value + progressBar + `</li>`;
+				//htmlContentLi += `<li class="cv-app-span-entry"><span class='standard-key-name '>` +  key + `</span>: `+ value + progressBar + `</li>`;
+
+				htmlContentDivSpan += `
+				<div class="col-lg-12" style="padding-bottom: 20px;"> 
+				<div class="row" style='font-size: 12px;'> `+  key +`   ` + value + `</div> </div>`; 
 			});
 
-			htmlContentUl += htmlContentLi;
 
-			htmlContentUl += `</ul>`;
-
-			$(htmlContentUl).insertAfter($('#' + section));
+			htmlContentDiv += htmlContentDivSpan + `</div></div>`;
+ + 
+			$(htmlContentDiv).insertAfter($('#' + section));
 		}
 }
 
@@ -113,21 +116,26 @@ function updateStandardNew(section) {
 
 		let contentToInclude = '';
 		$.each(sections, function(key, value) {
-			let level = window.DataStore.languageSettings[value];
-
-			let whiteDot = '&#9675;';
-			let blackDot = '&#9679';
 
 			let dots = '';
 
-			for(var i = 0; i < level['black']; i++) {
-				dots += blackDot;
-			}
+			if(hasGraph == 1) {
+				let level = window.DataStore.languageSettings[value];
 
-			for(var i = 0; i < level['white']; i++) {
-				dots += whiteDot;
-			}
+				let whiteDot = '&#9675;';
+				let blackDot = '&#9679';
 
+				
+
+				for(var i = 0; i < level['black']; i++) {
+					dots += blackDot;
+				}
+
+				for(var i = 0; i < level['white']; i++) {
+					dots += whiteDot;
+				
+				}
+			}
 
 			contentToInclude += `
 
