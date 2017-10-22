@@ -40,9 +40,9 @@ function includeSections() {
 function updateSections() {
 
 	updatePersonalInfo();
-	updateLanguages('languages');
+	updateStandardNew('languages');
+	updateStandardNew('technical-skills');
 	updateStandard('key-skills');
-	updateStandard('technical-skills');
 	updateSpecialSections('experience');
 	updateSpecialSections('education');
 	updateSpecialSections('courses');
@@ -105,7 +105,7 @@ function updateStandard(section) {
 		}
 }
 
-function updateLanguages(section) {
+function updateStandardNew(section) {
 
 		let sections = window.DataStore.sectionsData[section]['data'];
 		let hasIcons = window.DataStore.sectionsData[section]['has-icons'];
